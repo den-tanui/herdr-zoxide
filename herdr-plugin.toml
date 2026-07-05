@@ -1,0 +1,18 @@
+id = "herdr-zoxide"
+name = "Zoxide Navigator"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Browse zoxide directories with fzf preview — open as workspace, tab, or split. Config: $(herdr plugin config-dir herdr-zoxide)/config.toml"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "browse"
+title = "Browse zoxide directories"
+contexts = ["global"]
+command = ["bash", "open-picker.sh"]
+
+[[panes]]
+id = "picker"
+title = "Zoxide"
+placement = "overlay"
+command = ["bash", "zoxide-picker.sh"]
