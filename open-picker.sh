@@ -23,5 +23,5 @@ exec "$herdr_bin" plugin pane open \
   --plugin herdr-zoxide \
   --entrypoint picker \
   --placement overlay \
-  "${env_args[@]}" \
+  ${env_args[@]+"${env_args[@]}"} \
   --focus
